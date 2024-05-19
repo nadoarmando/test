@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  list-style: none;
+  /* color: #131550; */
+}
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #131550 !important;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #bcb2a3 !important;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  direction: rtl;
+  font-weight: weight;
+  background-image: url(../img/innerBackground.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+img:hover {
+  background-color: #aba8a8;
+  transition: 0.8s ease;
+}
+h1{
+  color: var(--blue);
+    padding: 25px 0 15px 0;
+    font-size: 45px; 
+    font-weight: 500;
+    margin-top: 70px;
+}
+
+section {
+  width: 80%;
+  margin: 20px auto;
+}
+section h2 {
+  margin: 30px;
+  padding-right: 35px;
+
+}
+section .info {
+  display: flex;
+  justify-content: space-between;
+}
+section .info .img {
+  width: 50%;
+  position: relative;
+}
+section .info .img img {
+  width: 97%;
+  height: 330px;
+  position: absolute;
+  top: 50px;
+  left: -15px;
+  z-index: 100;
+}
+section .info .text {
+  font-size: 10px;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  /* padding: 10px 30px 10px 10px; */
+  color: #2b2565;
+  /* font-style: bold; */
+  padding: 10px 40px;
+
+}
+section .info .text span {
+  font-size: 16px;
+  padding:0px 5px ;
+  /* font-weight: weight; */
+
+}
+section .info .text .loction {
+  padding: 15px 0;
+  display: flex;
+  border-top: var(--Gray) 1px solid;
+  border-bottom: var(--Gray) 1px solid;
+  align-items: center;
+}
+section .info .text .about {
+  width: 100%;
+  overflow-y: auto;
+  height: 300px;
+  /* font-weight: weight; */
+
+}
+section .info .links{
+  text-decoration: none;
+    padding: 0 0 25px 0;
+    display: flex;
+    align-items: center;
+    
+}
+section .info .links ul{
+  display: flex;
+}
+section .info .text .about p {
+  font-weight: 300;
+  line-height: 22px;
+  font-size: 14.5px;
+  padding: 10px 0;
+  font-weight: 400;
+  /* font-weight: bold; */
+}
+section .border-box {
+  position: absolute;
+  z-index: -100;
+  width: 38%;
+  height: 45%;
+}
+a {
+  text-decoration: none;
+
+}
+
+section .border-box .topBottomBorders::before {
+  content: "";
+  top: 0px;
+  height: 17px;
+  width: 100%;
+  position: absolute;
+  background: #bfb9af;
+  background: -moz-linear-gradient(
+    right,
+    #bfb9af 1%,
+    #d0c9be 16%,
+    #ded7cb 31%,
+    #f9f6ef 57%,
+    #faf7f0 78%,
+    #e0d9d0 100%
+  );
+  background: -webkit-linear-gradient(
+    right,
+    #bfb9af 1%,
+    #d0c9be 16%,
+    #ded7cb 31%,
+    #f9f6ef 57%,
+    #faf7f0 78%,
+    #e0d9d0 100%
+  );
+  background: linear-gradient(
+    to left,
+    #bfb9af 1%,
+    #d0c9be 16%,
+    #ded7cb 31%,
+    #f9f6ef 57%,
+    #faf7f0 78%,
+    #e0d9d0 100%
+  );
+}
+
+section .border-box .topBottomBorders::after {
+  content: "";
+  bottom: 0px;
+  height: 17px;
+  width: 100%;
+  position: absolute;
+  background: #bfb9af;
+  background: -moz-linear-gradient(
+    right,
+    #bfb9af 1%,
+    #d0c9be 16%,
+    #ded7cb 31%,
+    #f9f6ef 57%,
+    #faf7f0 78%,
+    #e0d9d0 100%
+  );
+  background: -webkit-linear-gradient(
+    right,
+    #bfb9af 1%,
+    #d0c9be 16%,
+    #ded7cb 31%,
+    #f9f6ef 57%,
+    #faf7f0 78%,
+    #e0d9d0 100%
+  );
+  background: linear-gradient(
+    to left,
+    #bfb9af 1%,
+    #d0c9be 16%,
+    #ded7cb 31%,
+    #f9f6ef 57%,
+    #faf7f0 78%,
+    #e0d9d0 100%
+  );
+}
+
+section .border-box .rightLeftBorders::before {
+  right: 0px;
+  height: 100%;
+  width: 17px;
+  position: absolute;
+  content: "";
+  background: #c3bcb2;
+}
+section .border-box .rightLeftBorders::after {
+  left: 0px;
+  height: 100%;
+  width: 17px;
+  position: absolute;
+  content: "";
+  background: #e5ded6;
+}
+
+@media (max-width: 767px) {
+  section .info {
+    flex-direction: column;
+  }
+  section .info .img {
+    width: 100%;
+  }
+  section .info .img img {
+    width: 100%;
+    position: static;
+  }
+  section .info .text {
+    width: 100%;
+  }
+}

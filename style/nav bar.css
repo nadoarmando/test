@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: #2b2565 #e8c87278;
+    list-style: none;
+}
+:root {
+    --blue: #2b2565;
+    --Gray: #c9d7dd;
+    --width:85%;
+    --main-margin:100px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #e8e1d7;
+    background-image:url("../images/bac-nav-bar.jpg");
+    background-position: right top;
+    background-size: 79%;
+    direction: rtl;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+/* start nav bar */
+.menu-container {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%; 
+    background-color: var(--blue); 
+    z-index: 9998;
+    transform: skew(-10deg); 
+    padding: 10px 0px;
+    animation: fadeIn 0.5s ease forwards; 
+    border-right: 3px solid white;
+}
+.menu-container .bac{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background-image: url("../images/bac-nav-bar.jpg");
+}
+@media(max-width:1060px){
+    .menu-container  {
+        width: 50%; ;
+        transform: skew(0deg);
+    }
+} 
+@media(max-width:550px){
+    .menu-container  {
+        width: 100%; ;
+        transform: skew(0deg);
+    }
+}
+.menu-container a{
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.menu-container .close{
+    position: absolute;
+    left: 0;
+}
+.menu-container .close:hover{
+    text-decoration: underline;
+}
+.menu-container svg{
+    margin: 5px 5px  0 5px ;
+}
+.menu-container svg:hover{
+    cursor: pointer;
+    
+}
+.menu-container .top-menu-items{
+    text-align: right;
+    transform: skew(2deg); 
+    width: 250px;
+    margin: 100px auto 0;
+}
+.menu-container .top-menu-items ul {
+    list-style: none;
+}
+.menu-container .top-menu-items ul li a{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.menu-container .top-menu-items ul li a:hover{
+    text-decoration: underline;
+}
+.ba{
+    width: 100px;
+    height: 100%;
+    background-color:var(--blue) ;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.menu-container .bottom-menu-items{
+    text-align: right;
+    transform: skew(2deg); 
+    width: 250px;
+    margin: 100px auto 0;
+}
+.menu-container .bottom-menu-items ul {
+    list-style: none;
+}
+.menu-container .bottom-menu-items ul li a:hover{
+    text-decoration: underline;
+}
+.menu-items {
+    padding-top: 50px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; 
+}
+.menu-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-items li {
+    margin: 10px 0;
+}
+.menu-items a {
+    text-decoration: none;
+    color: white; 
+    font-style: bold; 
+    text-shadow: -1px -1px 1 #000,  
+                1px -1px 1 #000,
+                -1px 1px 1 #000,
+                1px 1px 1 #000; 
+}
+.menu-container.active {
+    display: block; 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.menu-container .sign{
+    text-align: right;
+    padding: 50px ;
+}
+.menu-container .sign a button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+.menu-container .sign a button:hover{
+    cursor: pointer;
+    background-color: #524a99;
+}
+/* end nav bar */

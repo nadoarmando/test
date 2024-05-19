@@ -1,0 +1,252 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* scrollbar-color: #2b2565 #e8c87278; */
+}
+:root{
+    --blue:#2b2565;
+    --Gray :#c9d7dd7e;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #e8e1d7;
+    background-image: url("../images/background.jpg");
+    direction: rtl;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--blue); 
+}
+
+.container .background{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/bac-form.jpg");
+    background-repeat: no-repeat;
+    background-size:100% 100vh;
+    position: relative;
+}
+.container .background .wellcom{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 85%;
+    text-align: right;
+    direction: rtl;
+    color: white;
+}
+.container .background .wellcom h3{
+    font-weight: 700;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.container .background .wellcom p{
+    width: 40%;
+    line-height: 20px;
+    padding: 5px 0;
+    font-weight: 400;
+}
+.container .background img{
+    width: 100%;
+    height: 100%;
+}
+.container .content{
+    display: flex;
+    width: 85%;
+    align-content: center;
+    align-items: center;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container .content .details{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding:  0 30px;
+}
+.container .content .details .time{
+    width: 100%;
+    padding: 0 30px;
+    background-color:#f1f1f15e;
+    text-align: center;
+}
+.container .content .details .time .border{
+    padding: 12px 20px;
+    border-top: var(--blue) 1px solid;
+}
+.container .content .details .time .border1{
+    padding: 20px ;
+
+}
+.container .content .details .time div > div{
+    display: flex;
+    justify-content: center;
+    line-height: 15px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.container .content .details .time div > div svg{
+    margin: 0 7px;
+}
+.container .content .details .time div > div p {
+    font-size: 13px;
+    word-spacing: -1px;
+}
+.container .content .details .time div > div h3{
+    font-weight: 500;
+}
+.container .content .details .information{
+    width: 100%;
+    background-color:#f1f1f15e;
+    margin: 50px 0;
+    padding:  0 30px;
+}
+.container .content .details .information .title-price{
+    padding: 20px 0;
+}
+.container .content .details .information .price div{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.container .content .details .information .price .border2{
+    border-top: var(--blue) 1px solid;
+}
+.container .content .details .information .price{
+    margin: auto;
+}
+.container .content .details .information div span{
+    background-color: white;
+    padding: 2px;
+}
+@media(max-width:1205px){
+    .container .content{
+        justify-content: center;
+    }
+    .container .content .details{
+        min-width: 370px;
+        
+    }
+}
+/* ********** */
+.container .content .form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: rtl;
+    background-color: #f1f1f15e;
+    padding: 20px 25px  20px 15px;
+    border-radius: 5px;
+    width:100%;
+}
+.container .content .form form .row1 {
+    display: flex;
+    flex-direction:column;
+    /* flex-wrap: wrap; */
+    align-content: center;
+    justify-content: center;
+    width:100%;
+    
+}
+.container .content .form form .row1  .col1,
+.container .content .form form .row1  .col2,
+.container .content .form form .row1  .col3{
+    max-width: 620px;
+    display: flex;   
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container .content .form form .row2 {
+    display: flex;
+    flex-direction: column;
+}
+.container .content .form form  label{
+    padding-right: 8px;
+}
+.container .content .form form .row1  .col1 div,
+.container .content .form form .row1  .col2 div,
+.container .content .form form .row1  .col3 div{  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 310px;
+    justify-content: space-between;
+}
+.container .content .form form .row1 .col1 input
+,.container .content .form form .row1 .col2 input
+,.container .content .form form .row1 .col3 input
+,.container .content .form form .row2 select{
+    width: 300px;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    outline: none;
+    border-bottom: #2b2565 2px solid;
+    border-top: transparent 2px solid;
+    border-right: transparent 2px solid;
+    border-left:  transparent 2px solid;
+    background-color: white;
+    
+}
+.container .content .form form .button{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.container .content .form form .button input{
+    width: 140px;
+    padding: 10px;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+
+.container .content .form form h3{
+    padding: 5px 0 20px;
+}
+@media(max-width:600px){
+    .container .content .form form .button{
+        justify-content: space-between;
+    }
+    .container .content .form form .row1  .col1 div,
+    .container .content .form form .row1  .col2 div,
+    .container .content .form form .row1  .col3 div{
+        width: 365px;
+    }
+    .container .content .form form .row1 .col1 input
+    ,.container .content .form form .row1 .col2 input
+    ,.container .content .form form .row1 .col3 input
+    ,.container .content .form form .row2 select{
+        border: 2px solid var(--blue);
+        width: 365px;
+    }
+    .container .content .form form .button{
+        justify-content: space-between;
+    }
+    .container .content .form form .row1  .col1 ,
+    .container .content .form form .row1  .col2,
+    .container .content .form form .row1  .col3 {
+        flex-direction: column;
+        align-items: center;
+    }   
+    .container .content .form form{
+        padding: 20px 0;
+        border-radius: 5px;
+        width:100%;
+    }
+}

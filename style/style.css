@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: #2b2565 #e8c87278;
+}
+:root{
+    --blue:#2b2565;
+    --Gray :#C9D7DD;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #e8e1d7;
+    direction: rtl;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    
+    
+}
+.contanier{
+    margin:60px auto 0;
+    background-image: url("../images/background.jpg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: top;
+}
+.contanier .title {
+    width:  84%;
+    margin:  auto;
+}
+/* .contanier .title .search-bar{
+    position: relative;
+    width: 60%;
+    right: 100px;
+}
+.contanier .title .search-bar input{
+    width: 240px;
+    height: 38px;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+.contanier .title .search-bar input::placeholder{
+    font-size: 15px;
+    font-weight: 800;
+}
+.contanier .title .search-bar i{
+    padding: 11px 10px;
+    background-color: #2b2565;
+    position: absolute;
+    top: 0;
+    right: -36.7px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */
+.contanier .title .link{
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+}
+.contanier .title .link p{
+    padding: 0 5px;
+}
+.contanier .title .link a{
+    text-decoration: none;
+    color: var(--blue);
+}
+.contanier .title h1{
+    color: var(--blue);
+    padding: 50px 0;
+    font-size: 50px; 
+    font-weight: 700;
+}
+@media(max-width:376px){
+    .contanier .title h1,
+    .contanier .title .link{
+        justify-content: center;
+        text-align: center;
+    }
+}
+.contanier .section{
+    width: 84%;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media(max-width:310px){
+    .contanier .section{
+        width: 100%;
+    }
+}
+.contanier .section .card{
+    width: 300px;
+    background-color: white;
+    color: var(--blue);
+    margin: 10px 0;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
+}
+/* .contanier .section .card:hover{
+    cursor: pointer;
+    
+} */
+.contanier .section .card .image{
+    width: 300px;
+    height: 160px;
+    overflow: hidden;
+    
+}
+.contanier .section .card .image img{
+    width: 100%;
+    height: 100%;
+    transition: 0.9s;
+}
+.contanier .section .card .image img:hover{
+    transform: scale(1.2);
+}
+.contanier .section .card .content{
+    padding: 20px;
+    min-height: 301.4px;
+    position: relative;
+}
+.contanier .section .card .content h2{
+    padding: 10px 0 20px;
+    font-size:20px;
+    font-weight: 700;
+}
+.contanier .section .card .content .location{
+    padding: 15px 0;
+    display: flex;
+    border-top:var(--Gray) 1px solid ;
+    border-bottom:var(--Gray) 1px solid ;
+    align-items: flex-end;
+    
+}
+.contanier .section .card .content .location h4{
+    font-weight: 400;
+    padding: 0 10px;
+    
+}
+.contanier .section .card .content .paragraph{
+    padding:  15px 0 15px 10px;
+}
+.contanier .section .card .content .paragraph p{
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13.3px;
+    line-height: 20px;
+}
+.contanier .section .card .content .link{
+    display: flex;
+    padding: 15px 0 0 0;
+    position:absolute;
+    bottom:20px;
+    justify-content: space-between;
+    width: 85%;
+    
+}
+.contanier .section .card .content .link .read ,
+.contanier .section .card .content .link .ticket{
+    display: flex;
+    text-decoration: none;
+    color: var(--blue);
+}
+.contanier .section .card .content .link .read p,
+.contanier .section .card .content .link .ticket p{
+    padding: 0 0 0 7px;
+}
+.contanier .section .card .content .link .read svg{
+    background-color: var(--blue);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+

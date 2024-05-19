@@ -1,0 +1,355 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* scrollbar-color: #2b2565 #e8c87278; */
+}
+:root{
+    --blue:#2b2565;
+    --Gray :#c9d7dd7e;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--blue); 
+}
+
+body{
+    background-color: #e8e1d7;
+    direction: rtl;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+.container .title .link{
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+}
+.container .title .link p{
+    padding: 0 3px;
+}
+.container .title .link a{
+    text-decoration: none;
+    color: var(--blue);
+}
+.container .title h1{
+    color: var(--blue);
+    padding: 25px 0 0 0;
+    font-size: 45px; 
+    font-weight: 500;
+    margin-top: 70px;
+}
+@media(max-width:756px){
+    .container .title h1,
+    .container .title .link{
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+    }
+    .container .title .link p{
+        font-size: 14px;
+    }
+    .container .title svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+/* ***************************** */
+.container .information{
+    display: flex;
+    color: var(--blue);
+    align-items: center;
+    margin: 70px 0;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.container .information .image{
+    width: 45%;
+    height: 400px;
+    position: relative;
+    min-width: 300px;
+    
+}
+.container .information .image .border{
+    position: absolute;
+    width: 100%;
+    height: 17px;
+    top:-40px;
+    right: -10px;
+    /* background-image: linear-gradient(to right, #c3bcb2, yellow); */
+    background-image: linear-gradient(to left, #d6d1c7 1%, #d0c9be 16%, #ded7cb 31%, #f9f6ef 57%, #faf7f0 78%, #e0d9d036 90% );
+}
+.container .information .image .border::after{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 350px;
+    background-image: linear-gradient(to bottom,  #d6d1c7 10%, #d0c9be 16%, #ded7cb 50%, #d6d1c7 100% );
+    right: 0px;
+}
+.container .information .image .border::before{
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 17px;
+    background-color: #d6d1c7 ;
+    bottom: -350px;
+
+}
+.container .information .image img{
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+    left: -30px;
+}
+.container .information .content{
+    width: 50%;
+    padding: 30px 60px 30px 30px;
+    background-color: white;
+    min-width: 300px;
+    
+}
+.container .information .content .paragraph{
+    overflow-y: auto;
+    height: 290px;
+    margin-top: 20px;
+    line-height: 22px;
+    font-size: 14.5px;
+}
+.container .information .content .paragraph p{
+    padding: 10px 0 0 20px ;
+}
+.container .information .content  .location{
+    padding: 15px 0;
+    display: flex;
+    border-top:var(--Gray) 1px solid ;
+    border-bottom:var(--Gray) 1px solid ;
+    align-items: center;
+    
+}
+.container .information .content  .location h4{
+    font-weight: 400;
+    padding: 0 10px;
+    
+}
+.container .information .content  .ticket{
+    text-decoration: none;
+    padding: 0 0 25px 0;
+    display: flex;
+    /* color: var(--blue); */
+    align-items: center;
+}
+.container .information .content  .ticket p{
+    padding-right: 10px;
+}
+@media(max-width:756px){
+    .container .information{
+        flex-direction: column;
+    }
+    .container .information .image img{
+        left: 0;
+        width: 100%;
+    }
+    .container .information .image .border
+    {
+        display: none;
+    }
+    .container .information .image{
+        width: 100%;
+    }
+    .container .information .content{
+        width: 100%;
+    }
+}
+
+/* ***************************** */
+.container .collectibles{
+    position: relative;
+}
+
+.container .collectibles h2{
+    font-size: 35px ;
+    font-weight: 600;
+    color: var(--blue);
+}
+.container .collectibles .card,
+.container .collectibles .card2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+.container .collectibles .card2{
+    flex-direction: row-reverse;
+}
+.container .collectibles .card h2,
+.container .collectibles .card2 h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.container .collectibles .card .image,
+.container .collectibles .card2 .image{
+    width: 44.5%;
+    
+}
+.container .collectibles .card .image img,
+.container .collectibles .card2 .image img{
+    width: 100%;
+    height: 360px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.container .collectibles .card .icon,
+.container .collectibles .card2 .icon{
+    background-color: var(--blue);
+    padding: 11px ;
+    border-radius: 50%;
+    
+}
+.container .collectibles .card .paragraph{
+    background-color: aliceblue;
+    width: 44.5%;
+    padding: 50px;
+    background-color: var(--blue);
+    color: white;
+    line-height: 25px;
+    position: relative;
+    animation: forwards 3s 1;
+    animation-name: animation-for-card;
+    /* animation-duration: 1s; */
+    animation-delay: -1s;
+    /* animation-fill-mode: forwards; */
+
+}
+@keyframes animation-for-card {
+    from {left: 800px;}
+    to {left: 0px;}
+    }
+.container .collectibles .card2 .paragraph{
+    background-color: aliceblue;
+    width: 44.5%;
+    padding: 50px;
+    background-color: var(--blue);
+    color: white;
+    line-height: 25px;
+    position: relative;
+    animation: forwards 3s 1;
+    animation-name: animation-for-card2;
+    /* animation-duration: 1s; */
+    animation-delay: -1s;
+    /* animation-fill-mode: forwards; */
+}
+    @keyframes animation-for-card2 {
+        from {left: -800px;}
+        to {left: 0px;}
+        }
+.container .collectibles .card .paragraph h2,
+.container .collectibles .card2 .paragraph h2{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.container .collectibles .card .paragraph ul,
+.container .collectibles .card2 .paragraph ul{
+    list-style-type: none;
+}
+.container .collectibles .card .paragraph::after{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent transparent var(--blue);
+    border-width: 20px ;
+    border-style: solid;
+    right: -40px;
+    top: calc(50% - 20px);
+}
+.container .collectibles .card2 .paragraph::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: transparent var(--blue) transparent transparent ;
+    border-width: 20px ;
+    border-style: solid;
+    left: -40px;
+    top: calc(50% - 20px);
+}
+.container .collectibles .line1{
+    position: absolute;
+    width: 3px;
+    background-color: var(--blue);
+    height: 82%;
+    left: calc(50% - 1.5px);
+    top:250px;
+    z-index: -1;
+}
+@media(max-width:756px){
+    body{
+        text-align: center;
+    }
+    .container .collectibles .card,
+    .container .collectibles .card2{
+        flex-direction: column;
+        min-width: 300px;
+    }
+    .container .collectibles .card .image,
+    .container .collectibles .card2 .image{
+        width: 100%;
+    }
+    .container .collectibles .card .image img,
+    .container .collectibles .card2 .image img{
+        width: 100%;
+        border-radius: 0;   
+    }
+    .container .collectibles .card .icon
+    ,.container .collectibles .card2 .icon
+    ,.container .collectibles .card2 .paragraph::before
+    ,.container .collectibles .card .paragraph::after
+    ,.container .collectibles .line2
+    ,.container .collectibles .line1{
+        display: none;
+    }
+    .container .collectibles .card .paragraph
+    ,.container .collectibles .card2 .paragraph
+    {
+        width: 100%;
+        animation: none;
+    }
+    .container .collectibles .card ,
+    .container .collectibles .card2 {
+        background-color: var(--blue);
+    }
+    .container{
+        width: 70%;
+        margin: auto;
+    }
+}
+@media(max-width:450px){
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+}
+
